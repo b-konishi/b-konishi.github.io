@@ -3,6 +3,19 @@ body {
   margin-bottom: 10vh;
 }
 
+#publications {
+  display: inline;
+}
+
+#bib-download {
+  margin-left: 10px;
+}
+
 #table-of-contents > a {
   margin-right: 10px;
 }
+
+li, dd {
+  margin-bottom: 10px;
+}
+
