@@ -2,3 +2,7 @@
 body {
   margin-bottom: 10vh;
 }
+
+#table-of-contents > a {
+  margin-right: 10px;
+}
