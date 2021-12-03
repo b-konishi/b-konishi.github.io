@@ -25,6 +25,9 @@
   margin-bottom: 10px;
 }
 
+.ref-description {
+  margin-left: 3rem;
+}
 .ref-description > dt{
   font-style: italic;
   font-weight: bold;

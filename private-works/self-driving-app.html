@@ -28,6 +28,31 @@
       <li>matplotlib</li>
     </ul>
 
+    <h2>Class MultiPerceptron</h2>
+    <h3>#train</h3>
+    <dl class='ref-description'>
+      <dt>inputs</dt>
+      <dd>shape: (N, N_in)</dd>
+      <dd>N: the number of data</dd>
+      <dd>N_in: the number of the input layer</dd>
+
+      <dt>desired_outputs</dt>
+      <dd>shape: (N, N_out)</dd>
+      <dd>N: the number of data</dd>
+      <dd>N_out: the number of the output layer</dd>
+
+      <dt>epoch</dt>
+      <dd>Default: 100</dd>
+    </dl>
+
+    <h3>#predict</h3>
+    <dl class='ref-description'>
+      <dt>data</dt>
+      <dd>shape: (N_in)</dd>
+      <dd>N_in: the number of the input layer</dd>
+    </dl>
+    
+
     <h2>Class SelfDriving</h2>
     <dl class='ref-description'>
       <dt>window_title</dt>
@@ -41,18 +66,14 @@
       <dt>step_deg</dt>
       <dd></dd>
       <dd>Default: 10 [deg]</dd>
-
-      <dt>car_size</dt>
-      <dd></dd>
-      <dd>Default: (50,70)</dd>
       
       <dt>car_color</dt>
       <dd></dd>
-      <dd>Default: (153,102,0)</dd>
+      <dd>Default: (150,100,0)</dd>
 
       <dt>car_sensor_num</dt>
       <dd>The number of sensors mounted on a car</dd>
-      <dd>Default: 200</dd>
+      <dd>Default: 50</dd>
 
       <dt>road_color</dt>
       <dd></dd>
@@ -60,8 +81,44 @@
 
       <dt>road_width</dt>
       <dd></dd>
-      <dd>Default: 50 [pixel]</dd>
+      <dd>Default: 30 [pixel]</dd>
     </dl>
+
+    <h3>#get_model</h3>
+    <dl class='ref-description'>
+      <dt>Return:</dt>
+      <dd>A multiPerceptron model</dd>
+    </dl>
+
+    <h3>#rotate_coord</h3>
+    <dl class='ref-description'>
+      <dt>vec</dt>
+      <dd>A vector before rotation</dd>
+      <dt>deg</dt>
+      <dd>Rotation angle</dd>
+      <dt>Return:</dt>
+      <dd>A rotated vector</dd>
+    </dl>
+
+    <h3>#put_label</h3>
+    <dl class='ref-description'>
+      <dt>img</dt>
+      <dd></dd>
+      <dt>text</dt>
+      <dd></dd>
+      <dt>width</dt>
+      <dd></dd>
+    </dl>
+
+    <h3>#make_image</h3>
+    <h3>#draw_circle</h3>
+    <dl class='ref-description'>
+      <dt>event, x, y, flags, param</dt>
+      <dd>Arguments of the callback function</dd>
+    </dl>
+    
+    <h3>#train</h3>
+    <h3>#predict</h3>
 
   </body>
 
