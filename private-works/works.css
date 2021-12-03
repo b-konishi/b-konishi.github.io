@@ -3,6 +3,28 @@
   margin-right: 10px;
 }
 
+.lang-tag {
+  font-size: small;
+  font-weight: bold;
+  border-radius: .5rem;
+  background-color: lightblue;
+  padding-right: .5rem;
+  padding-left: .5rem;
+}
+
+.img-icon {
+  width: 1.2rem;
+  margin-right: .3rem;
+}
+
+#works-list > dt {
+  font-size: large;
+}
+
+#works-list > dd{
+  margin-bottom: 10px;
+}
+
 .ref-description > dt{
   font-style: italic;
   font-weight: bold;
