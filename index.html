@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" type="text/css" href="./index.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TQ9N5S80CD"></script>
     <script>
@@ -11,6 +11,8 @@
       gtag('js', new Date());
       gtag('config', 'G-TQ9N5S80CD');
     </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
     <meta name="keywords" content="Konishi Bungo,Bungo,小西文昂,文昂">
 
@@ -28,14 +30,10 @@
       The University of Tokyo<br>
     </p>
     <p>
-      <img
-        src='assets/contact.svg'
-        height='15px'
-      />
+    <img class='fixed-characters' src='assets/contact.svg'/>
     </p>
 
     <p id="table-of-contents">
-      Go to ...
       <a href="#education">Education</a>/
       <a href="#publications">Publications</a>/
       <a href="#awards">Awards</a>/
@@ -44,7 +42,9 @@
       <a href="#links">Links</a>
     </p>
 
-    <h2 id="education">EDUCATION</h2>
+    <hr id="education" class='top-hr'>
+    <h2>EDUCATION</h2>
+    <hr>
 
     <dl>
       <dt>Apr. 2021 - <em>Present</em></dt>
@@ -63,8 +63,9 @@
       <dd>Electronics and Information Course, Osaka Prefecture University College of Technology, Osaka Japan</dd>
     </dl>
 
-
-    <h2 id="publications">PUBLICATIONS</h2>
+    <hr id="publications" class='top-hr'>
+    <h2>PUBLICATIONS</h2>
+    <hr>
 
     <h3>Journal Papers (Peer-reviewed)</h3>
     <ol>
@@ -211,8 +212,10 @@
       </li>
     </ol>
 
+    <hr id="awards" class='top-hr'>
+    <h2>Awards</h2>
+    <hr>
 
-    <h2 id="awards">Awards</h2>
     <ol>
       <li id='award-igarss22'>
         INSAR PHASE UNWRAPPING USING DYNAMICS OF COUPLED PHASE OSCILLATORS OF THE KURAMOTO MODEL<br>
@@ -241,7 +244,10 @@
     </ol>
 
     
-    <h2 id="events">Events</h2>
+    <hr id="events" class='top-hr'>
+    <h2>Events</h2>
+    <hr>
+
     <ol>
       <li>Microwave Workshops &amp; Exhibition (MWE) 2021, Poster Presentation (PACIFICO Yokohama, Japan, Nov.24-26, 2021) <a href="https://apmc-mwe.org/mwe2021/exhibition/univ/index.html" target="_blank" rel="noopener noreferrer">[LINK]</a></li>
       <li>Microwave Workshops &amp; Exhibition (MWE) 2019, Poster Presentation (PACIFICO Yokohama, Japan, Nov.27-29, 2019) <a href="https://apmc-mwe.org/mwe2019/exhibition/univ/index.html" target="_blank" rel="noopener noreferrer">[LINK]</a></li>
@@ -251,9 +257,10 @@
     </ol>
 
 
+    <hr id="skills" class='top-hr'>
+    <h2>Skills</h2>
+    <hr>
 
-
-    <h2 id="skills">Skills</h2>
     <h3>Programming Languages</h3>
     Python, Java, C, C++, R, HTML, CSS, Javascript, Ruby, Verilog, Shell script, etc...
 
@@ -270,7 +277,10 @@
     Machining (Drilling machine, Lathe, Milling Machine, and Band saw), Mechanical design (CAD), Circuit design (Arduino, Raspberry Pi, and PIC &amp; AVR microcontrollers)
 
 
-    <h2 id="links">LINKS</h2>
+    <hr id="links" class='top-hr'>
+    <h2>LINKS</h2>
+    <hr>
+
     <ul>
       <li><a href="https://www.eis.t.u-tokyo.ac.jp/" target="_blank" rel="noopener noreferrer">Lab. Homepage</a></li>
       <li><a href="https://github.com/b-konishi" target="_blank" rel="noopener noreferrer">GitHub</a></li>
@@ -281,6 +291,9 @@
       <li><a href="https://orcid.org/0000-0002-1388-7523" target="_blank" rel="noopener noreferrer">ORCID</a></li>
       <li><a href="./private-works/index.html">Private Works</a></li>
     </ul>
+
+
+    <script src="assets/js/scroll.js"></script>
   
   </body>
 </html>
