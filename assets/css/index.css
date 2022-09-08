@@ -5,6 +5,23 @@ body {
   margin-right: 10%;
 }
 
+p#lang-select {
+  position: fixed;
+  right: 10%;
+  background-color: white;
+}
+
+/*p#lang-select > button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: #0033cc;
+}
+p#lang-select > button:hover {
+  text-decoration: underline;
+  color: #002080;
+}*/
+
 hr.top-hr {
   margin-top: 5rem;
 }
