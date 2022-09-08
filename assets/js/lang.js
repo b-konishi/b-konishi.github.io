@@ -20,6 +20,7 @@ $('#en-btn').click(function () {
 
   lang = 'en';
 
+  // URLのlang-paramを削除した後更新
   var url = new URL(window.location.href);
   var params = url.searchParams;
   params.delete('lang');
@@ -36,6 +37,7 @@ $('#ja-btn').click(function () {
   lang = 'ja';
   changeLanguage('ja');
 
+  // URLのlang-paramをjaにしておく
   var url = new URL(window.location.href);
   var params = url.searchParams;
   params.delete('lang');
@@ -57,6 +59,7 @@ function changeLanguage (lang) {
     return;
   }
 
+  // 対応するlang-attrを持つ要素を全て変更
   $(`[${lang}]`).each(function () {
     console.log($(this).get(0))
     $(this).html($(this).attr(lang));

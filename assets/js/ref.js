@@ -3,7 +3,7 @@
 $(function() {
   // console.log('INITIALIZATION')
 
-
+  // Awardsにリンクする場合にインデックスを取得する
   $('a[href="#awards"]').each(function () {
     const awardName = $(this).children('span').attr('class');
     const award = $(`#awards-list > #award-${awardName}`)

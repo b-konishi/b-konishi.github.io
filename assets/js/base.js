@@ -1,4 +1,6 @@
 
+// URL中の任意(name)のGETパラメータを取得する
+// urlを未指定の場合は現在のURL
 function getParam(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, "\\$&");
