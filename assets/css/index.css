@@ -5,10 +5,20 @@ body {
   margin-right: 10%;
 }
 
+
+a:visited {
+  color: inherit;
+}
+
 p#lang-select {
   position: fixed;
   right: 10%;
   background-color: white;
+}
+
+:not(p#table-of-contents) > a[href="#awards"] {
+  color: red;
+  font-weight: bold;
 }
 
 /*p#lang-select > button {
