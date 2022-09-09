@@ -1,5 +1,6 @@
 
 body {
+  -webkit-text-size-adjust: 100%;
   margin-bottom: 10vh;
   margin-left: 10%;
   margin-right: 10%;
@@ -14,6 +15,8 @@ p#lang-select {
   position: fixed;
   right: 10%;
   background-color: white;
+
+  padding: 1%;
 }
 
 :not(p#table-of-contents) > a[href="#awards"] {
