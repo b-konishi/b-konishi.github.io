@@ -1,13 +1,12 @@
 
+var lang = getParam('lang');
+if (lang == null) {
+  lang = 'en';
+}
+
 $(function() {
   // console.log('INITIALIZATION')
 
-  console.log(getParam('lang'))
-
-  var lang = getParam('lang');
-  if (lang == null) {
-    lang = 'en';
-  }
   changeLanguage(lang);
 
   $(`#${lang}-btn`).attr('href', null)
