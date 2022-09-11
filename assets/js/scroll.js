@@ -4,7 +4,7 @@ $('a[href*="#"]').click(function () {
 
 	var elmHash = $(this).attr('href'); 
 	var pos = $(elmHash).offset().top;	
-	$('body,html').animate({scrollTop: pos}, 500); 
+	$('body,html').animate({scrollTop: pos-$('header').height()*1.2}, 500); 
 	return false;
 
 });

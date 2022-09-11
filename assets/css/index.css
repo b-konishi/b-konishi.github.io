@@ -1,22 +1,56 @@
 
 body { 
+  margin: 0;
   -webkit-text-size-adjust: 100%;
 }
 
+
+header {
+  width: 100%;
+  height: 3rem;
+  background: lightblue;
+
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+}
+
+header .nav #toc {
+  display: flex;
+}
+header nav #toc li {
+  list-style: none;
+}
+header nav #toc li + li {
+  margin-left: 20px;
+}
+
+
+
 main {
+  padding-top: 5vh;
+
   margin-bottom: 10vh;
   margin-left: 10%;
   margin-right: 10%;
 }
 
+
 footer {
-  margin-left: 0%;
-  height: 5vh;
+  width: 100%;
+  height: 3rem;
   background: lightblue;
 
+  box-sizing: border-box;
+  padding-bottom: 0;
+  padding-left: 0;
   display: flex;
-  justify-content: center;
   align-items: center;
+
+  justify-content: center;
 }
 
 
@@ -24,29 +58,12 @@ a:visited {
   color: inherit;
 }
 
-p#lang-select {
-  position: fixed;
-  right: 10%;
-  background-color: white;
 
-  padding: 1%;
-}
-
-:not(p#table-of-contents) > a[href="#awards"] {
+main a[href="#awards"] {
   color: red;
   font-weight: bold;
 }
 
-/*p#lang-select > button {
-  cursor: pointer;
-  border: none;
-  background: none;
-  color: #0033cc;
-}
-p#lang-select > button:hover {
-  text-decoration: underline;
-  color: #002080;
-}*/
 
 hr.top-hr {
   margin-top: 5rem;
@@ -64,13 +81,6 @@ img.fixed-characters {
   margin-left: 10px;
 }
 
-#table-of-contents {
-  margin-bottom: 5%;
-}
-#table-of-contents > a {
-  margin-right: 10px;
-  margin-left: 10px;
-}
 
 li, dd {
   margin-bottom: 10px;
@@ -83,8 +93,6 @@ li, dd {
   main {
     margin-left: 5%;
     margin-right: 5%;
-
-    color: red;
     font-size: 1.2rem;
   }
 }
@@ -93,8 +101,6 @@ li, dd {
   main {
     margin-left: 3%;
     margin-right: 3%;
-
-    color: blue;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 }

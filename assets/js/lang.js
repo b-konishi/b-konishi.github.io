@@ -60,7 +60,6 @@ function changeLanguage (lang) {
 
   // 対応するlang-attrを持つ要素を全て変更
   $(`[${lang}]`).each(function () {
-    console.log($(this).get(0))
     $(this).html($(this).attr(lang));
   });
 }
