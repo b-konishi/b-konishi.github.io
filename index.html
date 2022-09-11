@@ -24,22 +24,47 @@
 
   <body>
 
-    <header>
+    <header id='header1'>
 
       <nav class='nav'>
-        <ul id='toc'>
-          <li><a href="#education" ja='経歴'>Education</a></li>
-          <li><a href="#publications" ja='論文・発表'>Publications</a></li>
-          <li><a href="#awards" ja='受賞歴'>Awards</a></li>
-          <li><a href="#events" ja='イベント'>Events</a></li>
-          <li><a href="#skills" ja='技能・スキル'>Skills</a></li> 
-          <li><a href="#links" ja='関連リンク'>Links</a></li>
-          <li><a id='en-btn' href=''>ENGLISH</a>/<a id='ja-btn' href=''>日本語</a></li>
+        <ul id='header-toc'>
+          <li><a href="#education" class='toc' ja='経歴'>Education</a></li>
+          <li><a href="#publications" class='toc' ja='論文・発表'>Publications</a></li>
+          <li><a href="#awards" class='toc' ja='受賞歴'>Awards</a></li>
+          <li><a href="#events" class='toc' ja='イベント'>Events</a></li>
+          <li><a href="#skills" class='toc' ja='技能・スキル'>Skills</a></li> 
+          <li><a href="#links" class='toc' ja='関連リンク'>Links</a></li>
+          <li><a id='en-btn' class='toc' href=''>ENGLISH</a> / <a id='ja-btn' href=''>JAPANESE</a></li>
         </ul>
 
       </nav>
 
+
     </header>
+
+    <header id='header2'>
+      <div class="h-menu">
+        <input id="h-menu_checkbox" class="h-menuCheckbox" type="checkbox">
+        <label class="h-menu_icon" for="h-menu_checkbox"><span class="hamburger-icon"></span></label>
+        <label id="h-menu_black" class="h-menuCheckbox" for="h-menu_checkbox"></label>
+        <div id="h-menu_content">
+          <ul>
+            <li><a href="#education" class='toc' ja='経歴'>Education</a></li>
+            <li><a href="#publications" class='toc' ja='論文・発表'>Publications</a></li>
+            <li><a href="#awards" class='toc' ja='受賞歴'>Awards</a></li>
+            <li><a href="#events" class='toc' ja='イベント'>Events</a></li>
+            <li><a href="#skills" class='toc' ja='技能・スキル'>Skills</a></li> 
+            <li><a href="#links" class='toc' ja='関連リンク'>Links</a></li>
+            <li><a id='en-btn' class='toc' href=''>ENGLISH</a> / <a id='ja-btn' href=''>日本語</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+
+    <div class='lang-select'>
+      <a id='en-btn' href=''>ENGLISH</a>/<a id='ja-btn' href=''>日本語</a>
+    </div>
 
 
     <main>
@@ -56,6 +81,15 @@
     <p>
     <img class='fixed-characters' src='assets/contact.svg'/>
     </p>
+
+    <div>
+      <a href="#education" class='toc' ja='経歴'>Education</a> /
+      <a href="#publications" class='toc' ja='論文・発表'>Publications</a> /
+      <a href="#awards" class='toc' ja='受賞歴'>Awards</a> /
+      <a href="#events" class='toc' ja='イベント'>Events</a> /
+      <a href="#skills" class='toc' ja='技能・スキル'>Skills</a> /
+      <a href="#links" class='toc' ja='関連リンク'>Links</a>
+    </div>
 
 
     <hr id="education" class='top-hr'>
@@ -333,7 +367,8 @@
     <script src="assets/js/ref.js"></script>
     <script src="assets/js/scroll.js"></script>
     <script src="assets/js/time.js"></script>
-    <script src="assets/js/resize.js"></script>
+    <!-- <script src="assets/js/resize.js"></script> -->
+    <script src="assets/js/menu.js"></script>
   
   </body>
 </html>

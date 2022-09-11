@@ -16,7 +16,6 @@ $(function() {
 
 $('#en-btn').click(function () {
   console.log('ENGLISH')
-
   lang = 'en';
 
   // URLのlang-paramを削除した後更新
@@ -43,6 +42,7 @@ $('#ja-btn').click(function () {
   params.append('lang', 'ja');
   console.log(url.toString())
   history.replaceState('', '', url.toString());
+  //location.reload();
 
 
   $(`#ja-btn`).attr('href', null);

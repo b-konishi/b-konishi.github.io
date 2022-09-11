@@ -1,14 +1,16 @@
 
 body { 
-  margin: 0;
   -webkit-text-size-adjust: 100%;
+  margin: 0;
 }
 
 
-header {
+#header1 {
+
   width: 100%;
   height: 3rem;
-  background: lightblue;
+  color: white;
+  background: #1f2c37;
 
   box-sizing: border-box;
   position: fixed;
@@ -16,15 +18,22 @@ header {
   left: 0;
   display: flex;
   align-items: center;
+  justify-content: center;
+
+  /*word-break: break-all;*/
+  white-space: nowrap;
+}
+#header1 a.toc {
+  color: white;
 }
 
-header .nav #toc {
+#header1 .nav #header-toc {
   display: flex;
 }
-header nav #toc li {
+#header1 nav #header-toc li {
   list-style: none;
 }
-header nav #toc li + li {
+#header1 nav #header-toc li + li {
   margin-left: 20px;
 }
 
@@ -42,7 +51,8 @@ main {
 footer {
   width: 100%;
   height: 3rem;
-  background: lightblue;
+  color: white;
+  background: #1f2c37;
 
   box-sizing: border-box;
   padding-bottom: 0;
@@ -59,7 +69,7 @@ a:visited {
 }
 
 
-main a[href="#awards"] {
+main a[href="#awards"]:not(.toc) {
   color: red;
   font-weight: bold;
 }
@@ -88,8 +98,157 @@ li, dd {
 
 
 
+
+
+
+
+#header2 {
+  padding: 16px;
+  background: #1f2c37;
+
+  position: fixed; 
+  display: none;
+}
+
+.h-menu{
+  position: relative;
+}
+
+/*inputのcheckboxは非表示に*/
+.h-menuCheckbox {
+  display: none;
+}
+
+/*ハンバーガーメニュー*/
+.h-menu_icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+/*3本線*/
+.hamburger-icon, .hamburger-icon::before, .hamburger-icon::after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    bottom: 0;
+    width: 32px;
+    height: 3px;
+    background: white;
+    cursor: pointer;
+}
+.hamburger-icon:before {
+    top: 10px;
+}
+.hamburger-icon:after {
+    top: 20px;
+}
+
+/*メニュー以外を暗くする*/
+#h-menu_black {
+    display: none;
+    position: fixed;
+    z-index: 98;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0;
+    transition: .7s ease-in-out;
+}
+
+/*中身*/
+#h-menu_content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    max-width: 320px;
+    height: 100vh;
+    padding: 53px 16px 16px;
+    background: #1f2c37;
+    overflow: auto;
+    transition: .3s ease-in-out;
+    -webkit-transform: translateX(-105%);
+    transform: translateX(-105%);
+}
+
+/*チェックボックスにチェックが入ったら表示*/
+input:checked ~ .h-menu_icon .hamburger-icon{
+    background: transparent;
+}
+input:checked ~ .h-menu_icon .hamburger-icon::before{
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top:10px;
+    z-index:999;
+}
+input:checked ~ .h-menu_icon .hamburger-icon::after{
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top:10px;
+    z-index:999;
+}
+input:checked ~ #h-menu_black {
+    display: block;
+    opacity: .8;
+}
+#h-menu_checkbox:checked ~ #h-menu_content {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    box-shadow: 6px 0 25px rgba(0,0,0,.15);
+}
+.h-menu_icon .hamburger-icon,
+.h-menu_icon .hamburger-icon::before,
+.h-menu_icon .hamburger-icon::after,
+#h-menu_black,
+#h-menu_content{
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+#h-menu_content ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#h-menu_content ul li{
+    border-bottom: solid 1px white;
+}
+#h-menu_content li a {
+    display: block;
+    color: white;
+    font-size: 14px;
+    padding: 24px;
+    text-decoration: none;
+    transition-duration: 0.2s;
+}
+#h-menu_content li a:hover {
+    background: #455b6d;
+}
+
+
+
+
+
+
+
+
 @media screen and (max-width: 959px) {
 	/* 959px以下に適用されるCSS（タブレット用） */
+
+  #header1, .lang-select { 
+    display: none;
+  }
+  #header2 {
+    display: block;
+  }
+
   main {
     margin-left: 5%;
     margin-right: 5%;
@@ -98,6 +257,14 @@ li, dd {
 }
 @media screen and (max-width: 480px) {
 	/* 480px以下に適用されるCSS（スマホ用） */
+
+  #header1, .lang-select { 
+    display: none;
+  }
+  #header2 {
+    display: block;
+  }
+
   main {
     margin-left: 3%;
     margin-right: 3%;

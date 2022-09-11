@@ -3,7 +3,7 @@ const defRatio = 0.8;
 
 $(function () {
   //const defHeight = $('header').height();
-  //defRatio = Math.floor($('#toc').height() / defHeight * 10) / 10;
+  //defRatio = Math.floor($('#header-toc').height() / defHeight * 10) / 10;
 
   console.log('defRatio: ', defRatio);
 
@@ -15,38 +15,27 @@ $(window).resize(function() {
 
   
   console.log(parseInt($('header').css('font-size')))
-  console.log($('#toc').height() / $('header').height(), defRatio)
+  console.log($('#header-toc').height() / $('header').height(), defRatio)
 
   changeFont();
-
-  /*
-  for (
-    var size = parseInt($('header').css('font-size'));
-    $('#toc').height() / $('header').height() > defRatio && size > 1;
-    size--
-  ) {
-    console.log('change size: ' +  size);
-    $('header').css('font-size', size+'px');
-  }
-
-  */
-
 
 });
 
 function changeFont () {
+  console.log('Change font')
+
   var convergence = false;
   var size = parseInt($('header').css('font-size'));
 
   if ($('header').css('display') == 'none') {
     $('header').css('font-size', '1px');
-    if ($('#toc').height() / $('header').height() < 1) {
+    if ($('#header-toc').height() / $('header').height() < 1) {
       $('header').show();
     }
   }
 
   while (true) {
-    var ratio = $('#toc').height() / $('header').height();
+    var ratio = $('#header-toc').height() / $('header').height();
 
     if ((ratio > defRatio && ratio < 1) || isNaN(ratio)) {
       console.log('Break')
@@ -66,7 +55,7 @@ function changeFont () {
       size--;
       $('header').css('font-size', size+'px');
 
-      ratio = $('#toc').height() / $('header').height();
+      ratio = $('#header-toc').height() / $('header').height();
       if (ratio < defRatio) {
         break;
       }
@@ -76,7 +65,7 @@ function changeFont () {
       size++;
       $('header').css('font-size', size+'px');
 
-      ratio = $('#toc').height() / $('header').height();
+      ratio = $('#header-toc').height() / $('header').height();
       if (ratio > 1) {
         size--;
         break;
