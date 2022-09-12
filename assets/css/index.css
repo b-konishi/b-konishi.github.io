@@ -234,7 +234,7 @@ input:checked ~ #h-menu_black {
   font-size: 18px;
   padding: 10px;
 }
-#h-menu_content li a, span, input {
+#h-menu_content li a, #h-menu_content li span, #h-menu_content li input {
   display: block;
   color: white;
   text-decoration: none;
