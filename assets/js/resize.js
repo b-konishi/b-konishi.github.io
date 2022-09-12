@@ -7,12 +7,14 @@ $(function () {
 $('.font-size').on('change', function() {
   console.log('Range was changed');
 
-  const ratio = $(this).val();
-  const curSize = parseInt($('main').css('font-size'));
+  $('main').css('font-size', '1rem');
 
-  console.log(curSize*(1+ratio/100));
-  $('main').css('font-size', curSize*(1+ratio/100)+'px');
-  $('.fixed-characters').css('height', curSize*(1+ratio/100)+'px');
+  const ratio = $(this).val();
+  const defSize = parseInt($('main').css('font-size'));
+
+  console.log(defSize*(1+ratio/100));
+  $('main').css('font-size', defSize*(1+ratio/100)+'px');
+  $('.fixed-characters').css('height', defSize*(1+ratio/100)+'px');
 });
 
 $(window).resize(function() {
