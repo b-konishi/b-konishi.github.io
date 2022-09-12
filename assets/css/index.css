@@ -5,7 +5,7 @@ body {
 }
 
 
-#header1 {
+#header-pc {
 
   width: 100%;
   height: 3rem;
@@ -18,23 +18,29 @@ body {
   left: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
+  /*justify-content: center;*/
 
   /*word-break: break-all;*/
   white-space: nowrap;
 }
-#header1 a.toc {
+#header-pc a.toc {
   color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+#header-pc .nav {
+  margin-left: 10%;
 }
 
-#header1 .nav #header-toc {
+#header-pc .nav ul.header-toc {
   display: flex;
+  padding-left: 0;
 }
-#header1 nav #header-toc li {
+#header-pc .nav ul.header-toc li {
   list-style: none;
 }
-#header1 nav #header-toc li + li {
-  margin-left: 20px;
+#header-pc .nav ul.header-toc li:not(:first-child) {
+  margin-left: 40px;
 }
 
 
@@ -102,8 +108,8 @@ li, dd {
 
 
 
-#header2 {
-  padding: 16px;
+#header-mobile {
+  padding: 14px;
   background: #1f2c37;
 
   position: fixed; 
@@ -123,7 +129,7 @@ li, dd {
 .h-menu_icon {
     display: inline-block;
     width: 30px;
-    height: 30px;
+    height: 26px;
     vertical-align: middle;
 }
 
@@ -224,7 +230,7 @@ input:checked ~ #h-menu_black {
     display: block;
     color: white;
     font-size: 14px;
-    padding: 24px;
+    padding: 10px;
     text-decoration: none;
     transition-duration: 0.2s;
 }
@@ -242,10 +248,10 @@ input:checked ~ #h-menu_black {
 @media screen and (max-width: 959px) {
 	/* 959px以下に適用されるCSS（タブレット用） */
 
-  #header1, .lang-select { 
+  #header-pc { 
     display: none;
   }
-  #header2 {
+  #header-mobile {
     display: block;
   }
 
@@ -258,10 +264,10 @@ input:checked ~ #h-menu_black {
 @media screen and (max-width: 480px) {
 	/* 480px以下に適用されるCSS（スマホ用） */
 
-  #header1, .lang-select { 
+  #header-pc { 
     display: none;
   }
-  #header2 {
+  #header-mobile {
     display: block;
   }
 
