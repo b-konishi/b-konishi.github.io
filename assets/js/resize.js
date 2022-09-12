@@ -6,6 +6,7 @@ $(function () {
 
 $('.font-size').on('change', function() {
   console.log('Range was changed');
+  console.log($('#header-mobile').outerHeight());
 
   $('main').css('font-size', '1rem');
 
@@ -15,6 +16,8 @@ $('.font-size').on('change', function() {
   console.log(defSize*(1+ratio/100));
   $('main').css('font-size', defSize*(1+ratio/100)+'px');
   $('.fixed-characters').css('height', defSize*(1+ratio/100)+'px');
+
+  $('main').css('padding-top', $('#header-mobile').outerHeight()*1.1+'px');
 });
 
 $(window).resize(function() {

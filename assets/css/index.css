@@ -6,24 +6,18 @@ body {
 }
 
 
-#header-pc {
 
+#header-pc {
   width: 100%;
   height: 60px;
   color: white;
   background: #1f2c37;
-
   position: fixed;
-  /*justify-content: center;*/
-
-  /*word-break: break-all;*/
-
 }
 #header-pc .nav {
   margin-left: 10%;
   margin-bottom: 0;
 }
-
 #header-pc .nav ul.header-toc {
   height: 100%;
   min-height: 0;
@@ -49,12 +43,28 @@ body {
 
 
 main {
-  padding-top: 5vh;
-
+  padding-top: 66px;
   margin-bottom: 10vh;
   margin-left: 10%;
   margin-right: 10%;
 }
+main a:visited {
+  color: -webkit-link;
+}
+main a[href="#awards"]:not(.toc) {
+  color: red;
+  font-weight: bold;
+}
+main hr.top-hr {
+  margin-top: 3rem;
+}
+main img.fixed-characters {
+  height: 1rem;
+}
+main li, dd {
+  margin-bottom: 10px;
+}
+
 
 
 footer {
@@ -80,206 +90,4 @@ footer ul {
 footer ul li {
   list-style: none;
   white-space: nowrap;
-}
-
-
-a:visited {
-  color: inherit;
-}
-
-
-main a[href="#awards"]:not(.toc) {
-  color: red;
-  font-weight: bold;
-}
-
-
-main hr.top-hr {
-  margin-top: 3rem;
-}
-
-main img.fixed-characters {
-  height: 1rem;
-}
-
-
-main li, dd {
-  margin-bottom: 10px;
-}
-
-
-
-
-
-
-
-#header-mobile {
-  padding: 14px;
-  background: #1f2c37;
-
-  position: fixed; 
-  display: none;
-}
-
-.h-menu{
-  position: relative;
-}
-
-/*inputのcheckboxは非表示に*/
-.h-menuCheckbox {
-  display: none;
-}
-
-/*ハンバーガーメニュー*/
-.h-menu_icon {
-  display: inline-block;
-  width: 30px;
-  height: 26px;
-  vertical-align: middle;
-}
-
-/*3本線*/
-.hamburger-icon, .hamburger-icon::before, .hamburger-icon::after {
-  content: '';
-  display: block;
-  position: absolute;
-  z-index: 100;
-  top: 0;
-  bottom: 0;
-  width: 32px;
-  height: 3px;
-  background: white;
-  cursor: pointer;
-}
-.hamburger-icon:before {
-  top: 10px;
-}
-.hamburger-icon:after {
-  top: 20px;
-}
-
-/*メニュー以外を暗くする*/
-#h-menu_black {
-  display: none;
-  position: fixed;
-  z-index: 98;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: black;
-  opacity: 0;
-  transition: .7s ease-in-out;
-}
-
-/*中身*/
-#h-menu_content {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 99;
-  width: 100%;
-  max-width: 320px;
-  height: 100vh;
-  padding: 53px 16px 16px;
-  background: #1f2c37;
-  overflow: auto;
-  transition: .3s ease-in-out;
-  -webkit-transform: translateX(-105%);
-  transform: translateX(-105%);
-}
-
-/*チェックボックスにチェックが入ったら表示*/
-input:checked ~ .h-menu_icon .hamburger-icon{
-  background: transparent;
-}
-input:checked ~ .h-menu_icon .hamburger-icon::before{
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  top: 10px;
-  z-index: 999;
-}
-input:checked ~ .h-menu_icon .hamburger-icon::after{
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  top: 10px;
-  z-index: 999;
-}
-input:checked ~ #h-menu_black {
-  display: block;
-  opacity: .8;
-}
-#h-menu_checkbox:checked ~ #h-menu_content {
-  -webkit-transform: translateX(0%);
-  transform: translateX(0%);
-  box-shadow: 6px 0 25px rgba(0,0,0,.15);
-}
-.h-menu_icon .hamburger-icon,
-.h-menu_icon .hamburger-icon::before,
-.h-menu_icon .hamburger-icon::after,
-#h-menu_black,
-#h-menu_content{
-  -webkit-transition: all .3s;
-  transition: all .3s;
-}
-
-#h-menu_content ul {
-  list-style: none;
-  margin: 0 0 30vh;
-  padding: 0;
-}
-#h-menu_content ul li{
-  border-bottom: solid 1px white;
-  color: white;
-  font-size: 18px;
-  padding: 10px;
-}
-#h-menu_content li a, #h-menu_content li span, #h-menu_content li input {
-  display: block;
-  color: white;
-  text-decoration: none;
-  transition-duration: 0.2s;
-}
-#h-menu_content li a:hover {
-  background: #455b6d;
-}
-
-
-
-
-
-
-
-
-@media screen and (max-width: 959px) {
-	/* 959px以下に適用されるCSS（タブレット用） */
-
-  #header-pc { 
-    display: none;
-  }
-  #header-mobile {
-    display: block;
-  }
-
-  main {
-    margin-left: 5%;
-    margin-right: 5%;
-    font-size: 1.1rem;
-  }
-}
-@media screen and (max-width: 480px) {
-	/* 480px以下に適用されるCSS（スマホ用） */
-
-  #header-pc { 
-    display: none;
-  }
-  #header-mobile {
-    display: block;
-  }
-
-  main {
-    margin-left: 3%;
-    margin-right: 3%;
-    font-size: 1.1rem;
-  }
 }
