@@ -1,30 +1,60 @@
 
-const defRatio = 0.8;
 
 $(function () {
-  //const defHeight = $('header').height();
-  //defRatio = Math.floor($('#header-toc').height() / defHeight * 10) / 10;
+  changeFooterFont();
+});
 
-  console.log('defRatio: ', defRatio);
+$('.font-size').on('change', function() {
+  console.log('Range was changed');
 
-  changeFont();
+  const ratio = $(this).val();
+  const curSize = parseInt($('main').css('font-size'));
+
+  console.log(curSize*(1+ratio/100));
+  $('main').css('font-size', curSize*(1+ratio/100)+'px');
+  $('.fixed-characters').css('height', curSize*(1+ratio/100)+'px');
 });
 
 $(window).resize(function() {
-  console.log('Resized');
-
-  
-  console.log(parseInt($('header').css('font-size')))
-  console.log($('#header-toc').height() / $('header').height(), defRatio)
-
-  changeFont();
-
+  changeFooterFont();
 });
 
-function changeFont () {
+function changeFooterFont () {
+  console.log('Resized footer-font');
+
+  $('footer').css('font-size', '1rem')
+  let size = parseInt($('footer').css('font-size'));
+
+  while (true) {
+
+    let listWidth = 0;
+    $('footer li').each(function() {
+      listWidth += $(this).width();
+    });
+    
+    if (size <= 1) {
+      break;
+    }
+    
+    if ($('footer').width() < listWidth) {
+      $('footer').css('font-size', --size+'px');
+    } else {
+      $('footer').css('font-size', size+'px');
+      break;
+    }
+  }
+  $('footer').css('height', 3*size+'px');
+
+}
+
+
+
+
+/* unused */
+const defRatio = 0.8;
+function changeFont2 () {
   console.log('Change font')
 
-  var convergence = false;
   var size = parseInt($('header').css('font-size'));
 
   if ($('header').css('display') == 'none') {
