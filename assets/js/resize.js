@@ -31,13 +31,14 @@ function changeFooterFont () {
   let size = parseInt($('footer').css('font-size'));
 
   while (true) {
+    console.log(size);
 
     let listWidth = 0;
     $('footer li').each(function() {
       listWidth += $(this).width();
     });
     
-    if (size <= 1) {
+    if (size <= 10) {
       break;
     }
     
